@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <add id="Speroteck_Newsblock::newsblock" title="Newsblock" module="Speroteck_Newsblock" sortOrder="100" resource="Speroteck_Newsblock::newsblock"/>
+        <add id="Speroteck_Newsblock::newsblock_manage" title="All News" module="Speroteck_Newsblock" sortOrder="10" action="newsblock/block/" parent="Speroteck_Newsblock::newsblock" resource="Speroteck_Newsblock::newsblock"/>
+    </menu>
+</config>
