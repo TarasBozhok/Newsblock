@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="speroteck_newsblock" class="Speroteck\Newsblock\Block\Widget\NewsblockList">
+        <label translate="true">Newsblock widget</label>
+        <description translate="true">WIdget in magento 2</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" visible="true" sort_order="0">
+                <label translate="true">Title</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

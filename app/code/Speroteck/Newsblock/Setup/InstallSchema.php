@@ -57,7 +57,7 @@ class InstallSchema implements InstallSchemaInterface
             'Short Description'
         )->addColumn(
             'content',
-            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,\
             255,
             ['nullable' => false],
             'Content'

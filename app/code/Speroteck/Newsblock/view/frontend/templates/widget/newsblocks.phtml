@@ -1,8 +1,5 @@
-<?php /** @var $block \Speroteck\Newsblock\Block\NewsblockList */ ?>
-<h1><?php echo __('Latest News') ?></h1>
-<div class="toolbar top">
-    <?php echo $block->getPagerHtml(); ?>
-</div>
+<h1><q><?php echo $block->getData('title'); ?></q></h1>
+<?php /** @var $block \Speroteck\Newsblock\Block\Widget\NewsblockList */ ?>
 <ul class="newsblock-list">
     <?php /** @var $post \Speroteck\Newsblock\Model\Newsblock */ ?>
     <?php
@@ -12,14 +9,9 @@
         $newsBlockData = $newsblock->getData();
         if (!empty($newsBlockData) && $newsBlockData['is_active']) { ?>
             <li class="newsblock">
-                <span><strong>Created at: </strong><?php echo $newsBlockData['created_at'] ?></span>
                 <h3><strong>Title: </strong><?php echo $newsBlockData['name'] ?></h3>
                 <h5><strong>Short description: </strong><?php echo $newsBlockData['short_description'] ?></h5>
-                <p><strong>Content: </strong><?php echo $newsBlockData['content'] ?></p>
             </li>
         <?php } ?>
     <?php } ?>
 </ul>
-<div class="toolbar top">
-    <?php echo $block->getPagerHtml(); ?>
-</div>

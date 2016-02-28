@@ -55,4 +55,31 @@ class NewsblockList extends Template implements \Magento\Framework\DataObject\Id
     {
         return [\Speroteck\Newsblock\Model\Newsblock::CACHE_TAG . '_' . 'list'];
     }
+
+    /**
+     * @return $this
+     */
+    protected function _prepareLayout()
+    {
+        parent::_prepareLayout();
+
+        /** @var \Magento\Theme\Block\Html\Pager */
+        $pager = $this->getLayout()->createBlock(
+            'Magento\Theme\Block\Html\Pager',
+            'newsblock.news.list.pager'
+        );
+        $pager->setLimit(3)
+            ->setCollection($this->getNews());
+        $this->setChild('pager', $pager);
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPagerHtml()
+    {
+        return $this->getChildHtml('pager');
+    }
 }
